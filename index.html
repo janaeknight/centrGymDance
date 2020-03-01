@@ -38,7 +38,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12 d-none d-xl-block d-lg-block d-md-block">
-                        <p>Powered by GithubSRC&copy;2020</p>
+                        <p>Powered by GithubSRC&copy;<span class="cprYear">2020</span></p>
                     </div>
                     <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 col-12 d-flex justify-content-end">
                         <ul class="list-unstyled">
@@ -58,7 +58,8 @@
                         <a class="navbar-brand" href="index.html">
                             <img src="css/ms.svg" height="55px">
                             <span class="titleXL">Mississippi Center for Gymnastics and Dance</span>
-                            <span class="titleXS">MCGA</span>
+                            <span class="titleXS">MS Center For Gym & Dance</span>
+                            <span class="titleXXS">MCGA</span>
                         </a>
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-classic" aria-controls="navbar-classic" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar top-bar mt-0"></span>
@@ -97,7 +98,7 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="menu-1">
                                         <li><a class="dropdown-item" href="#">
-                                                2020 Calendar</a>
+                                                2020-2021 Calendar</a>
                                         </li>
                                         <li><a class="dropdown-item" href="#">
                                                 Performances & Tickets</a>
@@ -114,7 +115,7 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="menu-1">
                                         <li><a class="dropdown-item" href="#">
-                                                2020 Student Handbook</a>
+                                                2020-2021 Student Handbook</a>
                                         </li>
                                         <li><a class="dropdown-item" href="#">
                                                 Admissions</a>
@@ -164,7 +165,7 @@
                                         <li class="row">
                                             <ul class="col">
                                                 <li><a class="dropdown-item" href="#">
-                                                    2020 Class Attire</a>
+                                                        2020-2021 Class Attire</a>
                                                 </li>
                                                 <li><a class="dropdown-item" href="#">
                                                         Testimonials</a>
@@ -200,7 +201,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact-us.html">Donate</a>
+                                    <a class="nav-link" href="donate.html">Donate</a>
                                 </li>
                             </ul>
                         </div>
@@ -243,7 +244,7 @@
 
 
 
-
+<!-- footer -->
     <footer>
         <br>
         <div class="sponsors d-flex align-items-center justify-content-center flex-wrap">
@@ -254,8 +255,12 @@
             <img src="images/spo648.png">
             <img src="images/spo333.png">
         </div>
-    </footer>
+            <p><b>info@mcgd.org</b></p>
 
+            <p></p>
+            <p>&copy;<span class="cprYear">2020</span> Mississippi Center for Gymnastics and Dance</p>
+    </footer>
+<!-- footer close -->
 
 
 
@@ -268,6 +273,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
+
+        // Dropdown Toggle
         $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
             if (!$(this).next().hasClass('show')) {
                 $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
@@ -281,6 +288,10 @@
 
             return false;
         });
+
+        //Automatically Replaces Copyright Year
+
+        $(".cprYear").text((new Date).getFullYear());
     </script>
 </body>
 </html>

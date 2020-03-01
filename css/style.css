@@ -2,7 +2,6 @@ body {
     overflow-x: hidden;
 }
 
-
 p {
 	margin: 0px 0px 24px 0px;
 }
@@ -395,26 +394,38 @@ a.text-primary:focus, a.text-primary:hover {
 footer {
 	width: 100vw; height: 350px;
 	background-color: black; color: snow;
+	text-align: center !important;
 }
 .sponsors img{
 	filter: grayscale(100%);
 }
 
-.titleXS { display: none; }
+/* Responsive Title Cards */
+.titleXS, .titleXXS { display: none; }
 
-@media screen and (max-width: 646px) { 	/* Changes <H1> AT BREAK */
+@media screen and (max-width: 499px) { 	/* Changes <H1> AT BREAK */
+	.titleXXS { display: inline-block; }
+	.titleXS { display: none; }
+	.titleXL { display: none; }
+}
+@media screen and (min-width: 500px) and (max-width: 650px) { 	/* Changes <H1> AT BREAK */
 	.titleXS { display: inline-block; }
 	.titleXL { display: none; }
 }
 
 /* Responsive Sponsor Images */
 
-	@media screen and (min-width: 200px) and (max-width: 720px) {
+	@media screen and (max-width: 499px) {
 		.sponsors img {
-			width: 23%; padding: 13px 10px;
+			width: 28%; padding: 13px 7px;
 		}
 	}
-	@media screen and (min-width: 721px) and (max-width: 999px) {
+	@media screen and (min-width: 500px) and (max-width: 650px) {
+		.sponsors img {
+			/*width: 23%;*/ width: 27%; padding: 13px 10px;
+		}
+	}
+	@media screen and (min-width: 651px) and (max-width: 999px) {
 		.sponsors img {
 			width: 15%; padding: 13px 10px;
 		}
@@ -422,6 +433,11 @@ footer {
 	@media screen and (min-width: 1000px) {
 		.sponsors img {
 			width: 15%; padding: 13px 10px;
+		}
+	}
+	@media screen and (min-width: 1500px) {
+		.sponsors img {
+			width: 14%; padding: 13px 10px;
 		}
 	}
 
