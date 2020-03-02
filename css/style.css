@@ -19,7 +19,10 @@ body {
 .hl-pink { color: pink; }   .hl-liBl { color: lightseagreen; }
 .hl-green { color: green; } .hl-purp { color: purple; }
 
-.container-gray { background-color: gray; }
+.container-gray { background-color: lightgray; }
+
+.mega-container1 { margin: 20px auto; }
+.mega-container2 { margin: 35px auto; }
 
 .mega-margin {
 	display: flex; flex-direction: row;
@@ -29,16 +32,33 @@ body {
 /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
 
 .blog {
-	display: flex; flex-direction: row;
-	width: 45%; height: 350px;
-	background-color: #000;
-	border: 1px solid #353839;
+	display: flex; flex-direction: column;
+	width: 340px; height: 300px;
+	background-color: whitesmoke; color: #353839;
 	margin: 10px 8px; overflow: hidden;
-	color: gainsboro;
+	background-size: cover; background-position: center;
+	font-family: Calibri;
 }
-.blogImg { width: 46%; }
-.blog img { width: 100%; padding-right: 6px; overflow: hidden; }
-.blogArticle { width:54%; margin: 10px; }
+/* hmmmmmmmmmm */
+.blog:hover { transform: scale(1.15); transition: all .5s; }
+.blogImg {
+	height: 230px;
+	background-color: lightgray;
+	background-size: cover; background-position: center;
+}
+.blogImg1 {
+	background-image: url("../images/gymnastics-583669_960_720.jpg");
+	background-position: top;
+}
+.blogImg2 { background-image: url("../images/winter-993869_960_720.jpg") ;}
+.blogImg3 { background-image: url("../images/graduations-4288787_960_720.jpg");}
+.blogImg4 { background-image: url("../images/dancing-1979143_1280.jpg");}
+
+.blogArticle {
+	margin: auto 5px 3px 5px; overflow: hidden;
+}
+
+#newsletter input { width: 85%; height: 30px; }
 
 p {
 	margin: 0px 0px 24px 0px;
@@ -453,10 +473,6 @@ footer a:hover { color: silver; }
 @media screen and (min-width: 500px) and (max-width: 650px) { 	/* Changes <H1> AT BREAK */
 	.titleXS { display: inline-block; }
 	.titleXL { display: none; }
-}
-
-@media screen and (max-width: 992px) {
-	.blog { width: 99% !important; max-height: 250px; }
 }
 
 /* Responsive Sponsor Images */
