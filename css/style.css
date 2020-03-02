@@ -21,6 +21,25 @@ body {
 
 .container-gray { background-color: gray; }
 
+.mega-margin {
+	display: flex; flex-direction: row;
+	flex-wrap: wrap; align-items: center; justify-content: center;
+}
+
+/*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
+
+.blog {
+	display: flex; flex-direction: row;
+	width: 45%; height: 350px;
+	background-color: #000;
+	border: 1px solid #353839;
+	margin: 10px 8px; overflow: hidden;
+	color: gainsboro;
+}
+.blogImg { width: 46%; }
+.blog img { width: 100%; padding-right: 6px; overflow: hidden; }
+.blogArticle { width:54%; margin: 10px; }
+
 p {
 	margin: 0px 0px 24px 0px;
 	cursor: default !important;
@@ -426,7 +445,7 @@ footer a:hover { color: silver; }
 /* Responsive Title Cards */
 .titleXS, .titleXXS { display: none; }
 
-@media screen and (max-width: 499px) { 	/* Changes <H1> AT BREAK */
+@media screen and (max-width: 499px) { 	/* Changes <H1> and .blogs AT BREAK */
 	.titleXXS { display: inline-block; }
 	.titleXS { display: none; }
 	.titleXL { display: none; }
@@ -434,6 +453,10 @@ footer a:hover { color: silver; }
 @media screen and (min-width: 500px) and (max-width: 650px) { 	/* Changes <H1> AT BREAK */
 	.titleXS { display: inline-block; }
 	.titleXL { display: none; }
+}
+
+@media screen and (max-width: 992px) {
+	.blog { width: 99% !important; max-height: 250px; }
 }
 
 /* Responsive Sponsor Images */
