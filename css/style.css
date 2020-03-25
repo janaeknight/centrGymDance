@@ -475,6 +475,10 @@ footer a:hover { color: silver; }
 	.titleXL { display: none; }
 }
 
+@media screen and (max-width: 758px) { /* Ok, but this REALLY resizes the blogs when they're too small 2 wrap. Looks bad, but works. */
+	.blog { width: 90vw; }
+}
+
 /* Responsive Sponsor Images */
 
 	@media screen and (max-width: 499px) {
